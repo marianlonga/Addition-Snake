@@ -1,0 +1,10 @@
+Me 330
+ccc 40
+bbb 30
+aaa 10
+ddd 5
+abc 0
+nobody 0
+nobody 0
+nobody 0
+nobody 0
