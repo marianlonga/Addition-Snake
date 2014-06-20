@@ -1,10 +1,10 @@
 Me 330
+qqq 95
+aaa 50
+aaa 40
 ccc 40
+aaa 30
 bbb 30
+me 15
 aaa 10
-ddd 5
-abc 0
-nobody 0
-nobody 0
-nobody 0
-nobody 0
+Aaa 8

@@ -3,6 +3,7 @@
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -175,26 +176,34 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 			// display the sum of 2 numbers
 			g.setFont(new Font("Georgia", Font.PLAIN, 15));
 			g.setColor(Color.BLACK);
-			g.drawString("Collect food with the value:", MainFrame.SCREEN_W/2-85, 28);
+			g.drawString(Translations.translate("Collect food with the value:"), MainFrame.SCREEN_W/2-85, 24);
 			g.setFont(new Font("Georgia", Font.PLAIN, 50));
 			g.setColor(Color.BLACK);
-			g.drawString(Integer.toString(number1) + " + " + Integer.toString(number2), MainFrame.SCREEN_W/2-70, 70);
+			g.drawString(Integer.toString(number1) + " + " + Integer.toString(number2), MainFrame.SCREEN_W/2-70, 66);
 			
 			// display score
 			g.setFont(new Font("Georgia", Font.PLAIN, 15));
 			g.setColor(new Color(210,105,30));
-			g.drawString("Score:", MainFrame.SCREEN_W-150, 28);
+			g.drawString(Translations.translate("Score:"), MainFrame.SCREEN_W-150, 24);
 			g.setFont(new Font("Georgia", Font.PLAIN, 40));
 			g.setColor(new Color(210,105,30));
-			g.drawString(Integer.toString(score), MainFrame.SCREEN_W-150, 70);
+			g.drawString(Integer.toString(score), MainFrame.SCREEN_W-150, 66);
 			
 			// display speed
 			g.setFont(new Font("Georgia", Font.PLAIN, 15));
 			g.setColor(new Color(200,0,0));
-			g.drawString("Speed:", 100, 28);
+			g.drawString(Translations.translate("Speed:"), 100, 24);
 			g.setFont(new Font("Georgia", Font.PLAIN, 40));
 			g.setColor(new Color(200,0,0));
-			g.drawString(Integer.toString(speed), 100, 70);
+			g.drawString(Integer.toString(speed), 100, 66);
+			
+			// display return to menu text
+			Font font = new Font("Georgia", Font.PLAIN, 16);
+			FontMetrics fontMetrics = g.getFontMetrics(font);
+			g.setFont(font);
+			g.setColor(new Color(200, 0, 0));
+			String s = Translations.translate("Press [ESC] to return to menu");
+			g.drawString(s, MainFrame.SCREEN_W - 10 - fontMetrics.stringWidth(s), MainFrame.SCREEN_H -32);
 			
 			// display board
 			g.setFont(new Font("Georgia", Font.PLAIN, 15));
@@ -237,7 +246,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 			if(gameOver) {
 				g.setColor(Color.BLACK);
 				g.setFont(new Font("Georgia", Font.PLAIN, 60));
-				g.drawString("Game Over!", MainFrame.SCREEN_W/2-150, MainFrame.SCREEN_H/2+50);
+				g.drawString(Translations.translate("Game Over!"), MainFrame.SCREEN_W/2-150, MainFrame.SCREEN_H/2+50);
 			}
 			
 			gScreen.drawImage(bufferImage, 0, 0, MainFrame.SCREEN_W, MainFrame.SCREEN_H, this);
@@ -342,6 +351,15 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 		if(e.getKeyCode() == KeyEvent.VK_H) removeHalfOfFoods();
 		
 		if(e.getKeyCode() == KeyEvent.VK_ESCAPE) returnToMenu();
+		
+		if(e.getKeyCode() == KeyEvent.VK_Q) {
+			timerMove.stop();
+			timerRedraw.stop();
+		}
+		if(e.getKeyCode() == KeyEvent.VK_W) {
+			timerMove.start();
+			timerRedraw.start();
+		}
 	}
 
 	@Override
@@ -352,7 +370,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 	private void returnToMenu() {
 		timerMove.stop();
 		timerRedraw.stop();
-		mainFrame.gameIsOver(username, score);
+		mainFrame.gameToMenu(username, score);
 	}
 
 }
