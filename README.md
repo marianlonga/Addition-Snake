@@ -7,7 +7,7 @@ A snake game I made in Java, where the user should collect food only with a valu
 
 Copyright
 ---------
-**Copyright (c) Marian Longa 2014. All rights reserved.**
+**Copyright (c) Marian Longa 2014. All rights reserved.**  
 **Email:**   marian _dot_ longa _at_ gmail _dot_ com  
 **Website:** http://marianlonga.com  
 **Github:**  https://github.com/marianlonga
