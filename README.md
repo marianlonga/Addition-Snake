@@ -13,6 +13,11 @@ Copyright
 **Github:**  https://github.com/marianlonga
 
 
+Installation
+---------
+No installation is required. Just download and run the JAR file `Addition-Snake.jar`.
+
+
 Features
 --------
 
