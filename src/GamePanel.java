@@ -351,15 +351,6 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 		if(e.getKeyCode() == KeyEvent.VK_H) removeHalfOfFoods();
 		
 		if(e.getKeyCode() == KeyEvent.VK_ESCAPE) returnToMenu();
-		
-		if(e.getKeyCode() == KeyEvent.VK_Q) {
-			timerMove.stop();
-			timerRedraw.stop();
-		}
-		if(e.getKeyCode() == KeyEvent.VK_W) {
-			timerMove.start();
-			timerRedraw.start();
-		}
 	}
 
 	@Override
