@@ -1,3 +1,4 @@
+package com.marianlonga.additionsnake;
 
 public class Translations {
 	
@@ -13,7 +14,7 @@ public class Translations {
 		{"Speed:", "Rýchlosť:"},
 		{"Game Over!", "Koniec hry!"},
 		{"Enter your username", "Zadaj svoju prezývku"},
-		{"Username may contain only alphanumeric characters and must be at least 2 letters long!", "Prezývka môže obsahovať iba alfanumerické znaky a musí mať dĺžku aspoň 2 znaky!"},
+		{"Username may contain only alphanumeric characters and must be at least 2 letters long!", "Prezývka môže obsahovať iba alfanumerické znaky a musí mať aspoň 2 znaky!"},
 		{"User", "Používateľ"},
 		{"has earned", "získal"},
 		{"points", "bodov"},

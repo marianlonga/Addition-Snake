@@ -15,7 +15,7 @@ Copyright
 
 Installation
 ---------
-No installation is required. Just download and run the JAR file `Addition-Snake.jar`.
+No installation is required. Just download and run the JAR file `Addition-Snake-jframe.jar`.
 
 
 Features

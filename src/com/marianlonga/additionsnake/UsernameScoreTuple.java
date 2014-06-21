@@ -1,3 +1,4 @@
+package com.marianlonga.additionsnake;
 
 public class UsernameScoreTuple {
 

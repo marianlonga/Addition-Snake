@@ -1,3 +1,4 @@
+package com.marianlonga.additionsnake;
 /* (c) 2014 Marian Longa */
 /* GameFrame contains all GUI and is a main class */
 

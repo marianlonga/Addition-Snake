@@ -1,3 +1,4 @@
+package com.marianlonga.additionsnake;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;

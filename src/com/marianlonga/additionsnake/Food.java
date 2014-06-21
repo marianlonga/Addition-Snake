@@ -1,3 +1,4 @@
+package com.marianlonga.additionsnake;
 /* (c) 2014 Marian Longa */
 /* Food contains the food's value and position */
 

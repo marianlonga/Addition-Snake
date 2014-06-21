@@ -1,12 +1,13 @@
+package com.marianlonga.additionsnake;
 import java.io.File;
 import java.util.ArrayList;
 
-import javax.swing.JFrame;
+import javax.swing.JApplet;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 
-public class MainFrame extends JFrame {
+public class MainFrame extends JApplet {
 	
 	// CONSTANTS
 	final static int
@@ -31,17 +32,11 @@ public class MainFrame extends JFrame {
 	static JPanel	gamePanel = null, 
 					menuPanel = null,
 					highScorePanel = null;
-
-	public static void main(String[] args) {
-		MainFrame mainFrame = new MainFrame();
-		mainFrame.setVisible(true);
-	}
 	
-	public MainFrame() {
-		super();
+	public void init() {
+		//super();
 		this.setSize(SCREEN_W, SCREEN_H);
 		this.setLayout(null);
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		Translations.setLanguage("English");
 		

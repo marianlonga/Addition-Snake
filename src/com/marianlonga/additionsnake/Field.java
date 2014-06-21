@@ -1,3 +1,4 @@
+package com.marianlonga.additionsnake;
 /* (c) 2014 Marian Longa */
 /* Field represents the x and y position of an object on board */
 

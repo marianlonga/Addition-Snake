@@ -1,3 +1,4 @@
+package com.marianlonga.additionsnake;
 /* (c) 2014 Marian Longa */
 /* Snake contains snake's body and functions for moving the snake */
 
