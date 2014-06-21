@@ -343,10 +343,10 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if(e.getKeyCode() == KeyEvent.VK_UP) snake.setDirection(0);
-		if(e.getKeyCode() == KeyEvent.VK_RIGHT) snake.setDirection(1);
-		if(e.getKeyCode() == KeyEvent.VK_DOWN) snake.setDirection(2);
-		if(e.getKeyCode() == KeyEvent.VK_LEFT) snake.setDirection(3);
+		if(e.getKeyCode() == KeyEvent.VK_UP || e.getKeyCode() == KeyEvent.VK_W) snake.setDirection(0);
+		if(e.getKeyCode() == KeyEvent.VK_RIGHT || e.getKeyCode() == KeyEvent.VK_D) snake.setDirection(1);
+		if(e.getKeyCode() == KeyEvent.VK_DOWN || e.getKeyCode() == KeyEvent.VK_S) snake.setDirection(2);
+		if(e.getKeyCode() == KeyEvent.VK_LEFT || e.getKeyCode() == KeyEvent.VK_A) snake.setDirection(3);
 		
 		if(e.getKeyCode() == KeyEvent.VK_H) removeHalfOfFoods();
 		
